@@ -1,0 +1,19 @@
+https://adamtheautomator.com/aws-lambda-example/#How_does_a_Lambda_function_work
+
+dotnet new -i Amazon.Lambda.Templates
+
+dotnet new | Select-String -SimpleMatch 'lambda'
+
+dotnet new lambda.EmptyFunction --name S3ListObjectsFunction --profile default --region us-west-2
+
+dotnet tool install -g Amazon.Lambda.Tools
+
+dotnet lambda deploy-function S3ListObjectsFunction
+
+aws lambda invoke --region us-west-2 --function-name S3ListObjectsFunction --payload '{ "firstName": "Jane", "surname": "Doe" }' --cli-binary-format raw-in-base64-out output.txt
+
+aws lambda invoke --region us-west-2 --function-name S3ListObjectsFunction --payload '"{""firstName"": ""Mickey"", ""surname"": ""Mouse""}"' --cli-binary-format raw-in-base64-out output.txt
+
+dotnet add package AWSSDK.S3
+
+dotnet add package AWSSDK.SimpleNotificationService

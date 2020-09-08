@@ -1,0 +1,5 @@
+src/S3ListObjectsFunction/obj/project.assets.json
+src/S3ListObjectsFunction/obj/S3ListObjectsFunction.csproj.nuget.dgspec.json
+src/S3ListObjectsFunction/obj/project.nuget.cache
+src/S3ListObjectsFunction/obj/S3ListObjectsFunction.csproj.nuget.g.props
+src/S3ListObjectsFunction/obj/S3ListObjectsFunction.csproj.nuget.g.targets
